@@ -25,7 +25,8 @@
         if(!empty($_POST["username"]) && !empty($_POST["password"])){
             $_SESSION["username"] = $_POST["username"];
             $_SESSION["password"] = $_POST["password"];
-            header("Location: dashboard.php");
+            include("admin_config.php");
+            header("dashboard.php");
         }
         else{
             echo"username / password kosong";
