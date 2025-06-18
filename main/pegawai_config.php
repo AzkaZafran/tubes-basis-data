@@ -13,14 +13,14 @@
                            $db_name);
 
     if($conn){
-        $sql = "SET ROLE 'admin'";
+        $sql = "SET ROLE 'pegawai'";
         if(mysqli_query($conn, $sql)){
-            $_SESSION["role"] = 'admin';
-            echo"masuk sebagai admin";
+            $_SESSION["role"] = 'pegawai';
+            echo"masuk sebagai pegawai";
         }
         else{
-            echo"pengguna ini tidak memiliki peran admin";
-            header("adminlogin.php");
+            echo"pengguna ini tidak memiliki peran pegawai";
+            header("pegawailogin.php");
         }
     }
     else{

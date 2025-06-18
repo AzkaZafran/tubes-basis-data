@@ -1,7 +1,3 @@
-<?php
-    session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    <h2>Login Admin</h2><br>
     <form action="adminlogin.php" method="post">
         <label>Username:</label><br>
         <input type="text" name="username"><br>
@@ -26,7 +23,7 @@
             $_SESSION["username"] = $_POST["username"];
             $_SESSION["password"] = $_POST["password"];
             include("admin_config.php");
-            header("dashboard.php");
+            header("Location: dashboard_karyawan.php");
         }
         else{
             echo"username / password kosong";
